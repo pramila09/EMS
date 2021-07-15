@@ -1,0 +1,26 @@
+<div class="jumbotron py-3">
+  <h1 class="display-4 text-center">Employee Management System</h1>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-employee-detail-form></app-employee-detail-form>
+    </div>
+    <div class="col-md-6">
+      <span>List of Employee Detail</span>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>Employee Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pd of service.list">
+            <td>
+              {{pd.employeeName}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
